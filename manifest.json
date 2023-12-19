@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Snap The Page",
+  "version": "1.0",
+  "description": "Snap The Page",
+  "permissions": ["activeTab", "scripting", "downloads"],
+  "action": {
+    "default_title": "Snap The Page",
+    "default_popup": "popup.html"
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snap The Page</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="hostSiteTitle">
+        <h3>Snap The Page</h3>
+      </div>
+      <div class="divider"></div>
+      <div class="selectingPortion">
+        <input type="checkbox" id="selectAll" checked="true" hidden />
+        <label for="selectAll" class="button"> Select All </label>
+        <label for="selectAll" class="selectAllCheckBox"></label>
+      </div>
+      <div class="divider"></div>
+      <div class="previewPortion">
+        <div class="previewGallery">
+          <!-- <div class="eachImg">
+            <input type="checkbox" name="" id="" />
+            <label for="" class="imgWrapper">
+              <img src="" alt="" />
+            </label>
+          </div> -->
+        </div>
+        <div class="loader"></div>
+      </div>
+      <div class="divider"></div>
+      <button class="downloadBtn">Download</button>
+    </div>
+    <script src="./jszip.min.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
