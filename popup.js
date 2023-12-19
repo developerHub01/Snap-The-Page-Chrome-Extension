@@ -71,6 +71,13 @@ const handleGeneratePreview = (result) => {
         element.classList.remove("active");
       } else {
         element.classList.add("active");
+        selectAll.checked = true;
+        document.querySelectorAll(".eachImg input").forEach((element) => {
+          if (!element.checked) {
+            selectAll.checked = false;
+            return;
+          }
+        });
       }
     });
   });

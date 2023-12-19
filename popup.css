@@ -15,6 +15,9 @@ body {
   font-family: "Poppins", sans-serif;
   background: var(--primaryColor);
 }
+a{
+  text-decoration: none;
+}
 button,
 input {
   font-family: "Poppins", sans-serif;
@@ -139,6 +142,51 @@ button,
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+}
+
+.authorInfo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.authorInfo p {
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: 600;
+  text-align: center;
+  color: #ffffff !important;
+  position: relative;
+  z-index: 9;
+}
+.authorLinkes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.authorLinkes a {
+  display: block;
+}
+.authorLinkes a img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transform: scale(0.8);
+  animation: authorInfoIconAnim 0.5s linear infinite alternate;
+}
+.authorLinkes a:nth-of-type(2) img {
+  animation-delay: 0.5s;
+}
+@keyframes authorInfoIconAnim {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 ::-webkit-scrollbar {

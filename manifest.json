@@ -5,7 +5,19 @@
   "description": "Snap The Page",
   "permissions": ["activeTab", "scripting", "downloads"],
   "action": {
+    "default_icon": {
+      "128": "images/icons/128.png",
+      "32": "images/icons/32.png",
+      "24": "images/icons/24.png",
+      "16": "images/icons/16.png"
+    },
     "default_title": "Snap The Page",
     "default_popup": "popup.html"
+  },
+  "icons": {
+    "128": "images/icons/128.png",
+    "32": "images/icons/32.png",
+    "24": "images/icons/24.png",
+    "16": "images/icons/16.png"
   }
 }
