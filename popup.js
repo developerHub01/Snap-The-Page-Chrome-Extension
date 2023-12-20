@@ -3,10 +3,14 @@ const loader = document.querySelector(".loader");
 const selectAll = document.querySelector("#selectAll");
 const downloadBtn = document.querySelector(".downloadBtn");
 const selectingPortion = document.querySelector(".selectingPortion");
+const emptyImageListWrning = document.querySelector(".emptyImageListWrning");
+console.log(emptyImageListWrning);
 loader.style.display = "block";
 downloadBtn.style.pointerEvent = "none";
 selectingPortion.style.display = "none";
+emptyImageListWrning.style.display = "none";
 previewGallery.style.display = "none";
+downloadBtn.style.display = "none";
 const chromeExtensionName = document.title;
 
 selectAll.addEventListener("change", (e) => {
@@ -42,13 +46,19 @@ const handleGetAllImages = () => {
 };
 
 const handleGeneratePreview = (result) => {
+  emptyImageListWrning.style.display = "none";
   const { allImages, title } = result[0]["result"];
 
   document.querySelector(".hostSiteTitle h3").innerText = title;
 
-  if (!allImages) return;
+  if (!allImages || !allImages.length) {
+    emptyImageListWrning.style.display = "block";
+    loader.style.display = "none";
+    downloadBtn.style.display = "none";
+    return;
+  }
   loader.style.display = "none";
-  downloadBtn.style.pointerEvent = "all";
+  downloadBtn.style.display = "block";
   selectingPortion.style.display = "";
   previewGallery.style.display = "";
 
