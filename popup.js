@@ -6,6 +6,7 @@ const selectingPortion = document.querySelector(".selectingPortion");
 loader.style.display = "block";
 downloadBtn.style.pointerEvent = "none";
 selectingPortion.style.display = "none";
+previewGallery.style.display = "none";
 const chromeExtensionName = document.title;
 
 selectAll.addEventListener("change", (e) => {
@@ -49,6 +50,7 @@ const handleGeneratePreview = (result) => {
   loader.style.display = "none";
   downloadBtn.style.pointerEvent = "all";
   selectingPortion.style.display = "";
+  previewGallery.style.display = "";
 
   // previewGallery
   previewGallery.innerHTML = "";
