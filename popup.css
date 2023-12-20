@@ -10,6 +10,9 @@
   --secondaryColor: #ec0868;
   --helperColor: #003652;
 }
+html {
+  scroll-behavior: smooth !important;
+}
 body {
   width: 720px;
   font-family: "Poppins", sans-serif;
@@ -148,7 +151,7 @@ button,
   object-fit: contain;
 }
 
-.emptyImageListWrning {
+.emptyImageListWarning {
   font-size: 25px;
   text-align: center;
   text-transform: capitalize;

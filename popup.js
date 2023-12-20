@@ -3,12 +3,11 @@ const loader = document.querySelector(".loader");
 const selectAll = document.querySelector("#selectAll");
 const downloadBtn = document.querySelector(".downloadBtn");
 const selectingPortion = document.querySelector(".selectingPortion");
-const emptyImageListWrning = document.querySelector(".emptyImageListWrning");
-console.log(emptyImageListWrning);
+const emptyImageListWarning = document.querySelector(".emptyImageListWarning");
 loader.style.display = "block";
 downloadBtn.style.pointerEvent = "none";
 selectingPortion.style.display = "none";
-emptyImageListWrning.style.display = "none";
+emptyImageListWarning.style.display = "none";
 previewGallery.style.display = "none";
 downloadBtn.style.display = "none";
 const chromeExtensionName = document.title;
@@ -46,21 +45,22 @@ const handleGetAllImages = () => {
 };
 
 const handleGeneratePreview = (result) => {
-  emptyImageListWrning.style.display = "none";
+  emptyImageListWarning.style.display = "none";
   const { allImages, title } = result[0]["result"];
 
   document.querySelector(".hostSiteTitle h3").innerText = title;
 
   if (!allImages || !allImages.length) {
-    emptyImageListWrning.style.display = "block";
+    emptyImageListWarning.style.display = "block";
     loader.style.display = "none";
     downloadBtn.style.display = "none";
-    return;
+  } else {
+    emptyImageListWarning.style.display = "none";
+    loader.style.display = "none";
+    downloadBtn.style.display = "block";
+    selectingPortion.style.display = "";
+    previewGallery.style.display = "";
   }
-  loader.style.display = "none";
-  downloadBtn.style.display = "block";
-  selectingPortion.style.display = "";
-  previewGallery.style.display = "";
 
   // previewGallery
   previewGallery.innerHTML = "";
