@@ -46,6 +46,7 @@ const handleGetAllImages = () => {
 
 const handleGeneratePreview = (result) => {
   emptyImageListWarning.style.display = "none";
+  if (!result || !result[0] || !result[0]["result"]) return;
   const { allImages, title } = result[0]["result"];
 
   document.querySelector(".hostSiteTitle h3").innerText = title;
@@ -127,6 +128,8 @@ downloadBtn.addEventListener("click", () => {
 // getting current host tab and getting access for scripting.
 chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
   const activeTab = tabs[0];
+
+  if (activeTab.url && activeTab.url.startsWith("chrome://")) return;
   chrome.scripting.executeScript(
     {
       target: { tabId: activeTab.id },

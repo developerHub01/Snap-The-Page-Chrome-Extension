@@ -102,7 +102,7 @@ button,
   border: 10px solid var(--secondaryColor);
   border-left-color: transparent;
   border-right-color: transparent;
-  animation: loaderAnim 1s linear infinite alternate;
+  animation: loaderAnim 1s linear infinite;
 }
 @keyframes loaderAnim {
   0% {
