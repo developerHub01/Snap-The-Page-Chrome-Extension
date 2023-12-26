@@ -132,6 +132,10 @@ button,
   cursor: pointer;
   border: 2px solid var(--helperColor);
   padding: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.eachImg:hover {
+  background: var(--secondaryColor);
 }
 .eachImg.active {
   border-color: var(--secondaryColor);
@@ -142,6 +146,10 @@ button,
   left: 5px;
   width: 15px;
   height: 15px;
+}
+.eachImg .imgWrapper {
+  display: grid;
+  place-items: center;
 }
 .eachImg img {
   width: auto;
@@ -192,9 +200,10 @@ button,
   animation-delay: 0.2s;
 }
 @keyframes authorNameAnim {
-  0%{
+  0% {
     transform: translateX(-100%);
-  }100%{
+  }
+  100% {
     transform: translateX(150%);
   }
 }

@@ -129,7 +129,7 @@ downloadBtn.addEventListener("click", () => {
 chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
   const activeTab = tabs[0];
 
-  if (activeTab.url && activeTab.url.startsWith("chrome://")) return;
+  if (activeTab.url && activeTab.url.startsWith("chrome")) return;
   chrome.scripting.executeScript(
     {
       target: { tabId: activeTab.id },
