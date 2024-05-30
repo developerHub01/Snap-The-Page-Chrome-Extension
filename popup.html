@@ -6,7 +6,7 @@
     <title>Snap The Page</title>
     <link rel="stylesheet" href="popup.css" />
   </head>
-  <body> 
+  <body>
     <div class="wrapper">
       <div class="hostSiteTitle">
         <h3>Snap The Page</h3>
@@ -14,7 +14,14 @@
       <div class="divider"></div>
       <div class="selectingPortion">
         <input type="checkbox" id="selectAll" checked="true" hidden />
-        <label for="selectAll" class="button"> Select All </label>
+        <label for="selectAll" class="button">
+          Select All <span class="numberOfImages"></span>
+        </label>
+        <div class="selectingPortionSpacer"></div>
+        <span class="numberOfImageSelectedWrapper">
+          <span class="numberOfImageSelected">50</span>
+          selected
+        </span>
         <label for="selectAll" class="selectAllCheckBox"></label>
       </div>
       <div class="divider"></div>
@@ -31,7 +38,10 @@
         <div class="loader"></div>
       </div>
       <div class="divider"></div>
-      <button class="downloadBtn">Download</button>
+      <button class="downloadBtn">
+        <span class="downloadText">Download</span>
+        <span class="downloadingNumber"></span>
+      </button>
       <div class="divider"></div>
       <div class="authorInfo">
         <a target="_blank" href="https://shakil-five.vercel.app/">
